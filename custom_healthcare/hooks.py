@@ -159,9 +159,15 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "custom_healthcare.event.get_events"
-# }
+override_whitelisted_methods = {
+	# "frappe.desk.doctype.event.event.get_events": "custom_healthcare.event.get_events"
+}
+# this is for custom healthcare
+override_doctype_class = {
+    "Therapy Session": "custom_healthcare.custom_healthcare.therapy_session.customTherapySession"
+}
+
+
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
